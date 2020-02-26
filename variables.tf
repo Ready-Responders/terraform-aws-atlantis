@@ -204,6 +204,12 @@ variable "atlantis_image" {
   default     = ""
 }
 
+variable "repository_credentials" {
+  type        = map(string)
+  description = "Container repository credentials; required when using a private repo.  This map currently supports a single key; \"credentialsParameter\", which should be the ARN of a Secrets Manager's secret holding the credentials"
+  default     = null
+}
+
 variable "atlantis_version" {
   description = "Verion of Atlantis to run. If not specified latest will be used"
   type        = string

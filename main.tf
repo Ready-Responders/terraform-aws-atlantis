@@ -450,6 +450,7 @@ module "container_definition_bitbucket" {
 
   container_name  = var.name
   container_image = local.atlantis_image
+  repository_credentials = var.repository_credentials
 
   container_cpu                = var.ecs_task_cpu
   container_memory             = var.ecs_task_memory
